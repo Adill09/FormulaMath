@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Формулы ЕНТ по математике</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+</head>
+<body>
+  <header>
+    <h1>Формулы ЕНТ по математике</h1>
+    <input type="text" id="search" placeholder="Поиск: дискриминант, синус...">
+  </header>
+  <main id="list">
+    <div class="formula-card">
+      <div class="formula-title">Квадрат суммы и разности</div>
+      <div class="note">Быстрое разложение</div>
+      <div>$$ (a+b)^2=a^2+2ab+b^2 \quad (a-b)^2=a^2-2ab+b^2 $$</div>
+    </div>
+    <div class="formula-card">
+      <div class="formula-title">Разность квадратов</div>
+      <div>$$ a^2-b^2=(a-b)(a+b) $$</div>
+    </div>
+    <div class="formula-card">
+      <div class="formula-title">Дискриминант и корни</div>
+      <div>$$ ax^2+bx+c=0, \; D=b^2-4ac, \; x=\frac{-b\pm\sqrt{D}}{2a} $$</div>
+    </div>
+    <div class="formula-card">
+      <div class="formula-title">Основное триг. тождество</div>
+      <div>$$ \sin^2x+\cos^2x=1 $$</div>
+    </div>
+    <div class="formula-card">
+      <div class="formula-title">Площадь треугольника</div>
+      <div>$$ S=\tfrac12 ab\sin C = \sqrt{p(p-a)(p-b)(p-c)} $$</div>
+    </div>
+    <div class="formula-card">
+      <div class="formula-title">Формула Бернулли</div>
+      <div>$$ P_k=\binom{n}{k}p^k(1-p)^{n-k} $$</div>
+    </div>
+  </main>  <script>
+    const input = document.getElementById('search');
+    const cards = [...document.querySelectorAll('.formula-card')];
+    input.addEventListener('input', () => {
+      const q = input.value.toLowerCase();
+      cards.forEach(card => {
+        card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none';
+      });
+    });
+  </script></body>
+</html>
