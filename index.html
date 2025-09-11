@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="ru">
+<!DOCTYPE html>
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,39 +9,218 @@
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
     onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
+
 <body>
   <header>
-    <h1>Формулы ЕНТ по математике</h1>
-    <input type="text" id="search" placeholder="Поиск: дискриминант, синус...">
+    <h1>ЕНТ Формулалары по математике</h1>
+    <input type="text" id="search" placeholder="Іздеу: туынды, интеграл...">
   </header>
   <main id="list">
     <div class="formula-card">
-      <div class="formula-title">Квадрат суммы и разности</div>
-      <div class="note">Быстрое разложение</div>
-      <div>$$ (a+b)^2=a^2+2ab+b^2 \quad (a-b)^2=a^2-2ab+b^2 $$</div>
+      <div class="formula-title">Туынды</div>
+      <div class="note">Норм тема</div>
+      <div>
+        <ol>
+          <li>\(\frac{d}{dx}(c) = 0 \quad (c = \text{константа})\)</li>
+          <li>\(\frac{d}{dx}(x) = 1\)</li>
+          <li>\(\frac{d}{dx}(x^n) = n x^{n-1}\)</li>
+          <li>\(\frac{d}{dx}(a^x) = a^x \ln a\)</li>
+          <li>\(\frac{d}{dx}(e^x) = e^x\)</li>
+          <li>\(\frac{d}{dx}(\ln x) = \frac{1}{x}\)</li>
+          <li>\(\frac{d}{dx}(\sin x) = \cos x\)</li>
+          <li>\(\frac{d}{dx}(\cos x) = -\sin x\)</li>
+          <li>\(\frac{d}{dx}(\tan x) = \frac{1}{\cos^2 x}\)</li>
+          <li>\(\frac{d}{dx}(u \pm v) = u' \pm v'\)</li>
+          <li>\(\frac{d}{dx}(u \cdot v) = u'v + uv'\)</li>
+          <li>\(\frac{d}{dx}\!\Big(\frac{u}{v}\Big) = \frac{u'v - uv'}{v^2}\)</li>
+        </ol>
+      </div>
     </div>
     <div class="formula-card">
-      <div class="formula-title">Разность квадратов</div>
-      <div>$$ a^2-b^2=(a-b)(a+b) $$</div>
+      <div class="formula-title">Интергал</div>
+      <div class="note">Қазіргі тақырып</div>
+      <div>
+        <ol>
+          <li>\(\int 0 \, dx = C\)</li>
+          <li>\(\int k \, dx = kx + C \quad (k = \text{константа})\)</li>
+          <li>\(\int x^n dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)\)</li>
+          <li>\(\int \frac{dx}{x} = \ln|x| + C\)</li>
+          <li>\(\int e^x dx = e^x + C\)</li>
+          <li>\(\int a^x dx = \frac{a^x}{\ln a} + C\)</li>
+          <li>\(\int \sin x dx = -\cos x + C\)</li>
+          <li>\(\int \cos x dx = \sin x + C\)</li>
+          <li>\(\int \frac{dx}{\cos^2 x} = \tan x + C\)</li>
+          <li>\(\int \frac{dx}{\sin^2 x} = -\cot x + C\)</li>
+        </ol>
+      </div>
     </div>
     <div class="formula-card">
-      <div class="formula-title">Дискриминант и корни</div>
-      <div>$$ ax^2+bx+c=0, \; D=b^2-4ac, \; x=\frac{-b\pm\sqrt{D}}{2a} $$</div>
+      <div class="formula-title">Тригонометрия</div>
+      <div class="note">хз 9 классқо</div>
+      <div>
+        <ol>
+          <li>\(\sin(x \pm y) = \sin x \cos y \pm \cos x \sin y\)</li>
+          <li>\(\cos(x \pm y) = \cos x \cos y \mp \sin x \sin y\)</li>
+          <li>\(tg(x \pm y) = \frac{tg x \pm tg y}{1 \mp tg x \cdot tg y}\)</li>
+          <li>\(\cos x \cdot \cos y = \tfrac{1}{2} \big( \cos(x-y) + \cos(x+y) \big)\)</li>
+          <li>\(\sin x \cdot \sin y = \tfrac{1}{2} \big( \cos(x-y) - \cos(x+y) \big)\)</li>
+          <li>\(\sin x \cdot \cos y = \tfrac{1}{2} \big( \sin(x+y) + \sin(x-y) \big)\)</li>
+          <li>\(\cos x + \cos y = 2 \cos \tfrac{x+y}{2} \cdot \cos \tfrac{x-y}{2}\)</li>
+          <li>\(\cos x - \cos y = -2 \sin \tfrac{x+y}{2} \cdot \sin \tfrac{x-y}{2}\)</li>
+          <li>\(\sin x \pm \sin y = 2 \sin \tfrac{x \pm y}{2} \cdot \cos \tfrac{x \mp y}{2}\)</li>
+          <li>\(\sin 2x = 2 \sin x \cos x\)</li>
+          <li>\(\cos 2x = \cos^2 x - \sin^2 x\)</li>
+          <li>\(\cos 2x = 2 \cos^2 x - 1\)</li>
+          <li>\(\cos 2x = 1 - 2 \sin^2 x\)</li>
+          <li>\(\cos^2 x = \tfrac{1 + \cos 2x}{2}\)</li>
+          <li>\(\sin^2 x = \tfrac{1 - \cos 2x}{2}\)</li>
+          <li>\(tg 2x = \tfrac{2 tg x}{1 - tg^2 x}\)</li>
+        </ol>
+      </div>
     </div>
     <div class="formula-card">
-      <div class="formula-title">Основное триг. тождество</div>
-      <div>$$ \sin^2x+\cos^2x=1 $$</div>
+      <div class="formula-title">Градус</div>
+      <div class="note">жаттамайсынба</div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>°</th>
+              <th>\(\sin x\)</th>
+              <th>\(\cos x\)</th>
+              <th>\(tg x\)</th>
+              <th>\(ctg x\)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0°</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>–</td>
+            </tr>
+            <tr>
+              <td>30°</td>
+              <td>\(\frac{1}{2}\)</td>
+              <td>\(\frac{\sqrt{3}}{2}\)</td>
+              <td>\(\frac{\sqrt{3}}{3}\)</td>
+              <td>\(\sqrt{3}\)</td>
+            </tr>
+            <tr>
+              <td>45°</td>
+              <td>\(\frac{\sqrt{2}}{2}\)</td>
+              <td>\(\frac{\sqrt{2}}{2}\)</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>60°</td>
+              <td>\(\frac{\sqrt{3}}{2}\)</td>
+              <td>\(\frac{1}{2}\)</td>
+              <td>\(\sqrt{3}\)</td>
+              <td>\(\frac{\sqrt{3}}{3}\)</td>
+            </tr>
+            <tr>
+              <td>90°</td>
+              <td>1</td>
+              <td>0</td>
+              <td>–</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>120°</td>
+              <td>\(\frac{\sqrt{3}}{2}\)</td>
+              <td>–\(\frac{1}{2}\)</td>
+              <td>–\(\sqrt{3}\)</td>
+              <td>–\(\frac{\sqrt{3}}{3}\)</td>
+            </tr>
+            <tr>
+              <td>135°</td>
+              <td>\(\frac{\sqrt{2}}{2}\)</td>
+              <td>–\(\frac{\sqrt{2}}{2}\)</td>
+              <td>–1</td>
+              <td>–1</td>
+            </tr>
+            <tr>
+              <td>150°</td>
+              <td>\(\frac{1}{2}\)</td>
+              <td>–\(\frac{\sqrt{3}}{2}\)</td>
+              <td>–\(\frac{\sqrt{3}}{3}\)</td>
+              <td>–\(\sqrt{3}\)</td>
+            </tr>
+            <tr>
+              <td>180°</td>
+              <td>0</td>
+              <td>–1</td>
+              <td>0</td>
+              <td>–</td>
+            </tr>
+            <tr>
+              <td>210°</td>
+              <td>–\(\frac{1}{2}\)</td>
+              <td>–\(\frac{\sqrt{3}}{2}\)</td>
+              <td>\(\frac{\sqrt{3}}{3}\)</td>
+              <td>\(\sqrt{3}\)</td>
+            </tr>
+            <tr>
+              <td>225°</td>
+              <td>–\(\frac{\sqrt{2}}{2}\)</td>
+              <td>–\(\frac{\sqrt{2}}{2}\)</td>
+              <td>1</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>240°</td>
+              <td>–\(\frac{\sqrt{3}}{2}\)</td>
+              <td>–\(\frac{1}{2}\)</td>
+              <td>\(\sqrt{3}\)</td>
+              <td>\(\frac{\sqrt{3}}{3}\)</td>
+            </tr>
+            <tr>
+              <td>270°</td>
+              <td>–1</td>
+              <td>0</td>
+              <td>–</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>300°</td>
+              <td>–\(\frac{\sqrt{3}}{2}\)</td>
+              <td>\(\frac{1}{2}\)</td>
+              <td>–\(\sqrt{3}\)</td>
+              <td>–\(\frac{\sqrt{3}}{3}\)</td>
+            </tr>
+            <tr>
+              <td>315°</td>
+              <td>–\(\frac{\sqrt{2}}{2}\)</td>
+              <td>\(\frac{\sqrt{2}}{2}\)</td>
+              <td>–1</td>
+              <td>–1</td>
+            </tr>
+            <tr>
+              <td>330°</td>
+              <td>–\(\frac{1}{2}\)</td>
+              <td>\(\frac{\sqrt{3}}{2}\)</td>
+              <td>–\(\frac{\sqrt{3}}{3}\)</td>
+              <td>–\(\sqrt{3}\)</td>
+            </tr>
+            <tr>
+              <td>360°</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>–</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="formula-card">
-      <div class="formula-title">Площадь треугольника</div>
-      <div>$$ S=\tfrac12 ab\sin C = \sqrt{p(p-a)(p-b)(p-c)} $$</div>
-    </div>
-    <div class="formula-card">
-      <div class="formula-title">Формула Бернулли</div>
-      <div>$$ P_k=\binom{n}{k}p^k(1-p)^{n-k} $$</div>
-    </div>
-  </main>  <script>
+  </main>
+  <script>
     const input = document.getElementById('search');
     const cards = [...document.querySelectorAll('.formula-card')];
     input.addEventListener('input', () => {
@@ -48,5 +229,7 @@
         card.style.display = card.innerText.toLowerCase().includes(q) ? '' : 'none';
       });
     });
-  </script></body>
+  </script>
+</body>
+
 </html>
